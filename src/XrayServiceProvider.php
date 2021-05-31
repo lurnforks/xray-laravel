@@ -25,6 +25,8 @@ class XrayServiceProvider extends ServiceProvider
         if (! config('xray.enabled')) {
             return;
         }
+
+        $this->registerCollectors();
     }
 
     /**
@@ -41,8 +43,6 @@ class XrayServiceProvider extends ServiceProvider
         if (! config('xray.enabled')) {
             return;
         }
-
-        $this->registerCollectors();
     }
 
     /**
