@@ -48,7 +48,7 @@ class SegmentCollector
             ->setUrl($request->url())
             ->setMethod($request->method());
 
-        $tracer->begin();
+        $tracer->begin(config('xray.sample_rate'));
     }
 
     public function initCliTracer(string $name): void

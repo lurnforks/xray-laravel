@@ -74,4 +74,6 @@ return [
             'expires' => '',
         ],
     ],
+
+    'sample_rate' => env('XRAY_SAMPLE_RATE', 10)
 ];
